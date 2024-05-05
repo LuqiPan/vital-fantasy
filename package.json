@@ -27,5 +27,7 @@
     "vitest": "^1.3.1"
   },
   "packageManager": "yarn@4.2.1",
-  "dependencies": {}
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
 }
