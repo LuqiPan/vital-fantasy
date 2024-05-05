@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "lint": "yarn nx affected -t lint",
+    "test": "yarn nx affected -t test",
+    "build": "yarn nx affected -t build"
+  },
   "devDependencies": {
     "@nx/eslint": "18.3.4",
     "@nx/eslint-plugin": "18.3.4",
