@@ -2,6 +2,7 @@
   "name": "@vital-fantasy/parse",
   "version": "0.0.1",
   "dependencies": {
+    "csv-parse": "^5.5.5",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",

@@ -1,5 +1,5 @@
-import { finished } from 'node:stream/promises';
-const csvParser = require('csv-parser');
+import { finished } from 'stream/promises';
+import { parse } from 'csv-parse';
 
 class Rider {
   private name: string;
@@ -26,28 +26,29 @@ type Stats = {
 export async function parseStats(
   rstream: NodeJS.ReadableStream
 ): Promise<Stats> {
-  var stats: Stats = {};
-  var firstRow = true;
+  const stats: Stats = {};
+  let firstRow = true;
 
-  rstream
-    .pipe(
-      csvParser({
-        mapHeaders: (header: string) =>
-          header.replaceAll(' ', '').replaceAll('-', ''),
-      })
-    )
-    .on('data', (row: any) => {
+  const parser = parse();
+
+  parser.on('readable', function () {
+    let record;
+    while ((record = parser.read()) !== null) {
       if (firstRow) {
         firstRow = false;
-        return;
+        continue;
       }
 
-      const rider = new Rider(row['_0'], row['_3']);
+      const rider = new Rider(record[0], record[3]);
+      stats[rider.toString()] = { cost: Number(record[4]) };
+    }
+  });
+  // Catch any error
+  parser.on('error', function (err) {
+    console.error('error', err.message);
+  });
 
-      stats[rider.toString()] = {
-        cost: Number(row['_4']),
-      };
-    });
+  rstream.pipe(parser);
 
   await finished(rstream);
   return stats;
