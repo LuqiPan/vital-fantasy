@@ -1,1 +1,1 @@
-export * from './lib/parse';
+export * from './lib/parse-stats';

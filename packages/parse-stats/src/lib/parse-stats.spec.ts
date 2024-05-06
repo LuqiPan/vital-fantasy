@@ -1,4 +1,4 @@
-import { parseStats } from './parse';
+import { parseStats } from './parse-stats';
 import { Readable } from 'stream';
 
 const rStream =
