@@ -1,5 +1,5 @@
 {
-  "name": "@vital-fantasy/parse",
+  "name": "@vital-fantasy/parse-stats",
   "version": "0.0.1",
   "dependencies": {
     "csv-parse": "^5.5.5",

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@vital-fantasy/parse": ["packages/parse/src/index.ts"]
+      "@vital-fantasy/parse-stats": ["packages/parse-stats/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
