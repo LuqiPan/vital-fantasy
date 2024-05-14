@@ -20,6 +20,11 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "reportsDirectory": "../../coverage/shared/parse-stats"
+      },
+      "configurations": {
+        "watch": {
+          "watch": true
+        }
       }
     }
   }
