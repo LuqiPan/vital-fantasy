@@ -14,7 +14,7 @@ export async function parseResults(
 ): Promise<Results> {
   const records = await parseCsv(rstream);
 
-  const stats = records.reduce((acc: Results, record: any) => {
+  const stats = records.reduce((acc: Results, record) => {
     const rider = new Rider(record[0], record[1]);
     acc[rider.toString()] = {
       semiRank: Number(record[2]),
