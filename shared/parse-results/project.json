@@ -1,0 +1,19 @@
+{
+  "name": "parse-results",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/parse-results/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/parse-results",
+        "main": "shared/parse-results/src/index.ts",
+        "tsConfig": "shared/parse-results/tsconfig.lib.json",
+        "assets": ["shared/parse-results/*.md"]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@vital-fantasy/parse-results",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@vital-fantasy/parse-csv": "0.0.1",
+    "@vital-fantasy/constants": "0.0.1"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true
+}
