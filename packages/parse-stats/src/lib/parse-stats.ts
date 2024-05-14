@@ -27,11 +27,12 @@ export async function parseStats(
 ): Promise<Stats> {
   const records = await parseCsv(rstream);
 
-  const stats = records.reduce((acc:Stats, record:any) => {
+  const stats = records.reduce((acc: Stats, record: any) => {
     const rider = new Rider(record[0], record[3]);
     acc[rider.toString()] = {
       cost: Number(record[4]),
     };
+    return acc;
   }, {});
 
   return stats;
