@@ -1,18 +1,5 @@
 import { parseCsv } from '@vital-fantasy/parse-csv';
-
-class Rider {
-  private name: string;
-  private class: string;
-
-  constructor(name: string, classs: string) {
-    this.name = name;
-    this.class = classs;
-  }
-
-  public toString(): string {
-    return `${this.name}|${this.class}`;
-  }
-}
+import { Rider } from '@vital-fantasy/constants';
 
 type Stat = {
   cost: number;

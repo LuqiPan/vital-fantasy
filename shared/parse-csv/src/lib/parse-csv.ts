@@ -1,9 +1,7 @@
 import { parse } from 'csv-parse';
 import { finished } from 'stream/promises';
 
-export async function parseCsv(
-  rstream: NodeJS.ReadableStream
-) {
+export async function parseCsv(rstream: NodeJS.ReadableStream) {
   const records: any[] = [];
   let firstRow = true;
 
@@ -30,5 +28,5 @@ export async function parseCsv(
 
   await finished(rstream);
 
-  return records
+  return records;
 }
