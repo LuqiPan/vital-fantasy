@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@vital-fantasy/combine": ["shared/combine/src/index.ts"],
       "@vital-fantasy/constants": ["shared/constants/src/index.ts"],
       "@vital-fantasy/parse-csv": ["shared/parse-csv/src/index.ts"],
       "@vital-fantasy/parse-results": ["shared/parse-results/src/index.ts"],

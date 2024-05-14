@@ -24,3 +24,5 @@ export async function parseStats(
 
   return stats;
 }
+
+export { Stats };
