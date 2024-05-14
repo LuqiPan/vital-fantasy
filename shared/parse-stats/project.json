@@ -1,7 +1,7 @@
 {
   "name": "parse-stats",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/parse-stats/src",
+  "sourceRoot": "shared/parse-stats/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,17 +9,17 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/parse-stats",
-        "main": "packages/parse-stats/src/index.ts",
-        "tsConfig": "packages/parse-stats/tsconfig.lib.json",
-        "assets": ["packages/parse-stats/*.md"]
+        "outputPath": "dist/shared/parse-stats",
+        "main": "shared/parse-stats/src/index.ts",
+        "tsConfig": "shared/parse-stats/tsconfig.lib.json",
+        "assets": ["shared/parse-stats/*.md"]
       }
     },
     "test": {
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/packages/parse-stats"
+        "reportsDirectory": "../../coverage/shared/parse-stats"
       }
     }
   }

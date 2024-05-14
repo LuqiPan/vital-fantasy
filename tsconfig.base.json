@@ -17,7 +17,7 @@
     "paths": {
       "@vital-fantasy/constants": ["shared/constants/src/index.ts"],
       "@vital-fantasy/parse-csv": ["shared/parse-csv/src/index.ts"],
-      "@vital-fantasy/parse-stats": ["packages/parse-stats/src/index.ts"]
+      "@vital-fantasy/parse-stats": ["shared/parse-stats/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
