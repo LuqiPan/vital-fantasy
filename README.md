@@ -8,3 +8,4 @@
 - [ ] DRY parseStats and parseResults
 - [ ] code coverage with Nx
 - [ ] single package.json file across the whole monorepo
+- [ ] index.d.ts file
