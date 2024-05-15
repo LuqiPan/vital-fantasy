@@ -5,15 +5,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/shared/parse-stats",
-        "main": "shared/parse-stats/src/index.ts",
-        "tsConfig": "shared/parse-stats/tsconfig.lib.json",
-        "assets": ["shared/parse-stats/*.md"]
-      }
-    }
+    "build": {}
   }
 }

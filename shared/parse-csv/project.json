@@ -5,15 +5,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/shared/parse-csv",
-        "main": "shared/parse-csv/src/index.ts",
-        "tsConfig": "shared/parse-csv/tsconfig.lib.json",
-        "assets": ["shared/parse-csv/*.md"]
-      }
-    }
+    "build": {}
   }
 }
