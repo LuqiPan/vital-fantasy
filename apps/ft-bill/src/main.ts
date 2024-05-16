@@ -1,4 +1,4 @@
-import { parseFiles } from '@vital-fantasy/parse-files';
+import { parseFiles } from '@vital-fantasy/analyze-round';
 import { stringForPrint } from '@vital-fantasy/string-for-print';
 import {
   statsRiderNameIndex,

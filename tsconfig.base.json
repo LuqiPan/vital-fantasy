@@ -15,10 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@vital-fantasy/analyze-round": ["libs/analyze-round/src/index.ts"],
       "@vital-fantasy/combine": ["shared/combine/src/index.ts"],
       "@vital-fantasy/constants": ["shared/constants/src/index.ts"],
       "@vital-fantasy/parse-csv": ["shared/parse-csv/src/index.ts"],
-      "@vital-fantasy/parse-files": ["libs/parse-files/src/index.ts"],
       "@vital-fantasy/parse-results": ["shared/parse-results/src/index.ts"],
       "@vital-fantasy/parse-stats": ["shared/parse-stats/src/index.ts"],
       "@vital-fantasy/string-for-print": ["libs/string-for-print/src/index.ts"]

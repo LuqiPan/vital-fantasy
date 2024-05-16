@@ -1,0 +1,9 @@
+{
+  "name": "analyze-round",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/analyze-round/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project analyze-round --web",
+  "targets": {}
+}

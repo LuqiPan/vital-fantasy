@@ -14,10 +14,20 @@ export async function parseFiles(
   resultsRiderSemiRankIndex: number
 ): Promise<ReturnValues> {
   const statsCsv = fs.createReadStream(statsCsvPath);
-  const stats = await parseStats(statsCsv, statsRiderNameIndex, statsRiderClassIndex, statsRiderCostIndex);
+  const stats = await parseStats(
+    statsCsv,
+    statsRiderNameIndex,
+    statsRiderClassIndex,
+    statsRiderCostIndex
+  );
 
   const resultsCsv = fs.createReadStream(resultsCsvPath);
-  const results = await parseResults(resultsCsv, resultsRiderNameIndex, resultsRiderClassIndex, resultsRiderSemiRankIndex);
+  const results = await parseResults(
+    resultsCsv,
+    resultsRiderNameIndex,
+    resultsRiderClassIndex,
+    resultsRiderSemiRankIndex
+  );
 
   return combine(stats, results);
 }

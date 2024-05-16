@@ -1,6 +1,10 @@
 import { pointsBreakdown } from '@vital-fantasy/constants';
 import { parseFiles } from './parse-files';
-import { statsRiderNameIndex, statsRiderClassIndex, statsRiderCostIndex } from '@vital-fantasy/constants';
+import {
+  statsRiderNameIndex,
+  statsRiderClassIndex,
+  statsRiderCostIndex,
+} from '@vital-fantasy/constants';
 
 const statsCsvPath = './src/assets/test-stats.csv';
 const resultsCsvPath = './src/assets/test-results.csv';
