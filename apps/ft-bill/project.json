@@ -1,0 +1,56 @@
+{
+  "name": "ft-bill",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ft-bill/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/ft-bill",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/ft-bill/src/main.ts",
+        "tsConfig": "apps/ft-bill/tsconfig.app.json",
+        "assets": ["apps/ft-bill/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ft-bill:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ft-bill:build:development"
+        },
+        "production": {
+          "buildTarget": "ft-bill:build:production"
+        }
+      }
+    }
+  }
+}

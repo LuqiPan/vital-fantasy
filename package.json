@@ -6,12 +6,15 @@
   "scripts": {
     "lint": "yarn nx-cloud record -- nx run-many -t lint",
     "test": "yarn nx-cloud record -- nx run-many -t test",
-    "build": "yarn nx-cloud record -- nx run-many -t build"
+    "build": "yarn nx-cloud record -- nx run-many -t build",
+    "ft-bill": "yarn build; node dist/apps/ft-bill/main.js"
   },
   "devDependencies": {
+    "@nx/esbuild": "19.0.4",
     "@nx/eslint": "19.0.4",
     "@nx/eslint-plugin": "19.0.4",
     "@nx/js": "19.0.4",
+    "@nx/node": "19.0.4",
     "@nx/vite": "19.0.4",
     "@nx/web": "19.0.4",
     "@nx/workspace": "19.0.4",
@@ -23,6 +26,7 @@
     "@typescript-eslint/parser": "^7.3.0",
     "@vitest/coverage-istanbul": "^1.6.0",
     "@vitest/ui": "^1.3.1",
+    "esbuild": "^0.19.2",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "nx": "19.0.4",
@@ -38,4 +42,3 @@
     "tslib": "^2.3.0"
   }
 }
-
