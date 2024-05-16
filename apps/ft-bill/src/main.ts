@@ -1,4 +1,5 @@
 import { parseFiles } from '@vital-fantasy/parse-files';
+import { stringForPrint } from '@vital-fantasy/string-for-print';
 
 (async () => {
   const statsCsvPath =
@@ -10,6 +11,11 @@ import { parseFiles } from '@vital-fantasy/parse-files';
     statsCsvPath,
     resultsCsvPath
   );
-  console.log(predictions);
+
+  console.log('---Fort William Predictions---');
+  console.log('Points Per Cost \t|\tRider');
+  console.log(stringForPrint(predictions));
+
+  console.log('\n---Fort William Outliers---');
   console.log(outliers);
 })();
