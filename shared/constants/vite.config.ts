@@ -16,7 +16,6 @@ export default defineConfig({
 
     reporters: ['default'],
     coverage: {
-      enabled: true,
       reportsDirectory: '../../coverage/shared/constants',
       provider: 'istanbul',
     },
