@@ -4,6 +4,8 @@ import { Stats } from '@vital-fantasy/parse-stats';
 
 export type Prediction = {
   PointsPerCost: number;
+  SemiRank: number;
+  Cost: number;
 };
 
 export type Predictions = {
@@ -59,6 +61,8 @@ export function combine(stats: Stats, results: Results): ReturnValues {
     const points = pointsByRank[result.semiRank];
     returnValues.predictions[riderString] = {
       PointsPerCost: points / stats[riderString].cost,
+      SemiRank: result.semiRank,
+      Cost: stats[riderString].cost,
     };
   }
 

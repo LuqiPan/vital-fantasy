@@ -51,6 +51,8 @@ describe('combine', () => {
       new ReturnValues({
         'Abigail Hogie|Elite Women': {
           PointsPerCost: pointsBreakdown['Elite Women'][1] / 14000,
+          SemiRank: 1,
+          Cost: 14000,
         },
       }),
     ],

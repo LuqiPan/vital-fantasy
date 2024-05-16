@@ -14,6 +14,8 @@ describe('parseFiles', () => {
     expect(predictions).toEqual({
       'Abigail Hogie|Elite Women': {
         PointsPerCost: pointsBreakdown['Elite Women'][1] / 14000,
+        SemiRank: 1,
+        Cost: 14000,
       },
     });
     expect(outliers).toBeUndefined;

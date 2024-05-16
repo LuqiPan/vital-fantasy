@@ -13,7 +13,7 @@ import { stringForPrint } from '@vital-fantasy/string-for-print';
   );
 
   console.log('---Fort William Predictions---');
-  console.log('Points Per Cost \t|\tRider');
+  console.log('Points Per Cost \t|\tRank \t|\tCost \t|\tRider');
   console.log(stringForPrint(predictions));
 
   console.log('\n---Fort William Outliers---');
