@@ -9,6 +9,8 @@ type Stats = {
   [key: string]: Stat;
 };
 
+export { Stats };
+
 export async function parseStats(
   rstream: NodeJS.ReadableStream,
   riderNameIndex: number,
@@ -27,5 +29,3 @@ export async function parseStats(
 
   return stats;
 }
-
-export { Stats };

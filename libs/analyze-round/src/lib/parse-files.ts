@@ -1,33 +1,33 @@
-import { parseStats } from '@vital-fantasy/parse-stats';
-import { parseResults } from '@vital-fantasy/parse-results';
-import { combine, ReturnValues } from '@vital-fantasy/combine';
+import { parseStats, Stats } from '@vital-fantasy/parse-stats';
+import { parseResults, Results } from '@vital-fantasy/parse-results';
 import * as fs from 'fs';
 
-export async function parseFiles(
+export const parseStatsCsv = async function (
   statsCsvPath: string,
   statsRiderNameIndex: number,
   statsRiderClassIndex: number,
-  statsRiderCostIndex: number,
-  resultsCsvPath: string,
-  resultsRiderNameIndex: number,
-  resultsRiderClassIndex: number,
-  resultsRiderSemiRankIndex: number
-): Promise<ReturnValues> {
+  statsRiderCostIndex: number
+): Promise<Stats> {
   const statsCsv = fs.createReadStream(statsCsvPath);
-  const stats = await parseStats(
+  return parseStats(
     statsCsv,
     statsRiderNameIndex,
     statsRiderClassIndex,
     statsRiderCostIndex
   );
+};
 
+export const parseResultsCsv = async function (
+  resultsCsvPath: string,
+  resultsRiderNameIndex: number,
+  resultsRiderClassIndex: number,
+  resultsRiderSemiRankIndex: number
+): Promise<Results> {
   const resultsCsv = fs.createReadStream(resultsCsvPath);
-  const results = await parseResults(
+  return parseResults(
     resultsCsv,
     resultsRiderNameIndex,
     resultsRiderClassIndex,
     resultsRiderSemiRankIndex
   );
-
-  return combine(stats, results);
-}
+};

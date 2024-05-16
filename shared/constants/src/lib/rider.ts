@@ -10,6 +10,6 @@ class Rider {
   public toString(): string {
     return `${this.Name}|${this.Class}`;
   }
-};
+}
 
 export { Rider };

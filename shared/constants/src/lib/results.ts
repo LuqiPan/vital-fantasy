@@ -7,3 +7,5 @@ export {
   resultsRiderClassIndex,
   resultsRiderSemiRankIndex,
 };
+
+export const testResultsCsvPath = './src/assets/test-results.csv';

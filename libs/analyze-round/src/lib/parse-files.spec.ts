@@ -1,27 +1,68 @@
-import { pointsBreakdown } from '@vital-fantasy/constants';
-import { parseFiles } from './parse-files';
+import {
+  pointsBreakdown,
+  testResultsCsvPath,
+  testStatsCsvPath,
+} from '@vital-fantasy/constants';
+import { parseResultsCsv, parseStatsCsv } from './parse-files';
 import {
   statsRiderNameIndex,
   statsRiderClassIndex,
   statsRiderCostIndex,
 } from '@vital-fantasy/constants';
+import {
+  resultsRiderNameIndex,
+  resultsRiderClassIndex,
+  resultsRiderSemiRankIndex,
+} from '@vital-fantasy/constants';
+import { combine } from '@vital-fantasy/combine';
 
-const statsCsvPath = './src/assets/test-stats.csv';
-const resultsCsvPath = './src/assets/test-results.csv';
-
-describe('parseFiles', () => {
+describe('parseStatsCsv', () => {
   it('should work', async () => {
-    const { predictions, outliers } = await parseFiles(
-      statsCsvPath,
+    const stats = await parseStatsCsv(
+      testStatsCsvPath,
       statsRiderNameIndex,
       statsRiderClassIndex,
-      statsRiderCostIndex,
-      resultsCsvPath,
-      // XXX
-      0,
-      1,
-      2
+      statsRiderCostIndex
     );
+
+    expect(stats).toEqual({
+      'Abigail Hogie|Elite Women': { cost: 14000 },
+    });
+  });
+});
+
+describe('parseResultsCsv', () => {
+  it('should work', async () => {
+    const results = await parseResultsCsv(
+      testResultsCsvPath,
+      resultsRiderNameIndex,
+      resultsRiderClassIndex,
+      resultsRiderSemiRankIndex
+    );
+
+    expect(results).toEqual({
+      'Abigail Hogie|Elite Women': { semiRank: 1 },
+    });
+  });
+});
+
+describe('parseStatsCsv and parseResultsCsv', () => {
+  it('combine as expected', async () => {
+    const stats = await parseStatsCsv(
+      testStatsCsvPath,
+      statsRiderNameIndex,
+      statsRiderClassIndex,
+      statsRiderCostIndex
+    );
+
+    const results = await parseResultsCsv(
+      testResultsCsvPath,
+      resultsRiderNameIndex,
+      resultsRiderClassIndex,
+      resultsRiderSemiRankIndex
+    );
+
+    const { predictions, outliers } = combine(stats, results);
 
     expect(predictions).toEqual({
       'Abigail Hogie|Elite Women': {
