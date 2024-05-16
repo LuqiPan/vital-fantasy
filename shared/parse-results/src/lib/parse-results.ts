@@ -10,14 +10,17 @@ type Results = {
 };
 
 export async function parseResults(
-  rstream: NodeJS.ReadableStream
+  rstream: NodeJS.ReadableStream,
+  riderNameIndex: number,
+  riderClassIndex: number,
+  riderSemiRankIndex: number
 ): Promise<Results> {
   const records = await parseCsv(rstream);
 
   const stats = records.reduce((acc: Results, record) => {
-    const rider = new Rider(record[0], record[1]);
+    const rider = new Rider(record[riderNameIndex], record[riderClassIndex]);
     acc[rider.toString()] = {
-      semiRank: Number(record[2]),
+      semiRank: Number(record[riderSemiRankIndex]),
     };
     return acc;
   }, {});

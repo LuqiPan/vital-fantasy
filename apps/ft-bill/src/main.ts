@@ -1,5 +1,15 @@
 import { parseFiles } from '@vital-fantasy/parse-files';
 import { stringForPrint } from '@vital-fantasy/string-for-print';
+import {
+  statsRiderNameIndex,
+  statsRiderClassIndex,
+  statsRiderCostIndex,
+} from '@vital-fantasy/constants';
+import {
+  resultsRiderNameIndex,
+  resultsRiderClassIndex,
+  resultsRiderSemiRankIndex,
+} from '@vital-fantasy/constants';
 
 const statsCsvPath = 'apps/ft-bill/src/assets/Fort William Advanced Stats.csv';
 const resultsCsvPath = 'apps/ft-bill/src/assets/ft-bill-results.csv';
@@ -11,7 +21,13 @@ const analyzeRound = async (
 ) => {
   const { predictions, outliers } = await parseFiles(
     statsCsvPath,
-    resultsCsvPath
+    statsRiderNameIndex,
+    statsRiderClassIndex,
+    statsRiderCostIndex,
+    resultsCsvPath,
+    resultsRiderNameIndex,
+    resultsRiderClassIndex,
+    resultsRiderSemiRankIndex
   );
 
   console.log(`---${round} Predictions---`);

@@ -5,13 +5,19 @@ import * as fs from 'fs';
 
 export async function parseFiles(
   statsCsvPath: string,
-  resultsCsvPath: string
+  statsRiderNameIndex: number,
+  statsRiderClassIndex: number,
+  statsRiderCostIndex: number,
+  resultsCsvPath: string,
+  resultsRiderNameIndex: number,
+  resultsRiderClassIndex: number,
+  resultsRiderSemiRankIndex: number
 ): Promise<ReturnValues> {
   const statsCsv = fs.createReadStream(statsCsvPath);
-  const stats = await parseStats(statsCsv);
+  const stats = await parseStats(statsCsv, statsRiderNameIndex, statsRiderClassIndex, statsRiderCostIndex);
 
   const resultsCsv = fs.createReadStream(resultsCsvPath);
-  const results = await parseResults(resultsCsv);
+  const results = await parseResults(resultsCsv, resultsRiderNameIndex, resultsRiderClassIndex, resultsRiderSemiRankIndex);
 
   return combine(stats, results);
 }

@@ -1,5 +1,6 @@
 import { pointsBreakdown } from '@vital-fantasy/constants';
 import { parseFiles } from './parse-files';
+import { statsRiderNameIndex, statsRiderClassIndex, statsRiderCostIndex } from '@vital-fantasy/constants';
 
 const statsCsvPath = './src/assets/test-stats.csv';
 const resultsCsvPath = './src/assets/test-results.csv';
@@ -8,7 +9,14 @@ describe('parseFiles', () => {
   it('should work', async () => {
     const { predictions, outliers } = await parseFiles(
       statsCsvPath,
-      resultsCsvPath
+      statsRiderNameIndex,
+      statsRiderClassIndex,
+      statsRiderCostIndex,
+      resultsCsvPath,
+      // XXX
+      0,
+      1,
+      2
     );
 
     expect(predictions).toEqual({
