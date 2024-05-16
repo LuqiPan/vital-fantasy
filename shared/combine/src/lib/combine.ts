@@ -2,11 +2,11 @@ import { pointsBreakdown, Rider } from '@vital-fantasy/constants';
 import { Result, Results } from '@vital-fantasy/parse-results';
 import { Stats } from '@vital-fantasy/parse-stats';
 
-type Prediction = {
+export type Prediction = {
   PointsPerCost: number;
 };
 
-type Predictions = {
+export type Predictions = {
   [key: string]: Prediction;
 };
 
