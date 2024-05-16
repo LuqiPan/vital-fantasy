@@ -51,7 +51,12 @@ export function combine(stats: Stats, results: Results): ReturnValues {
     }
 
     const pointsByRank: number[] = pointsBreakdown[rider.Class];
-    const points = pointsByRank[result.semiRank - 1];
+    if (!(result.semiRank in pointsByRank)) {
+      returnValues.recordOutlier(riderString, result);
+      continue;
+    }
+
+    const points = pointsByRank[result.semiRank];
     returnValues.predictions[riderString] = {
       PointsPerCost: points / stats[riderString].cost,
     };

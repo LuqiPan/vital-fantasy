@@ -13,7 +13,7 @@ describe('parseFiles', () => {
 
     expect(predictions).toEqual({
       'Abigail Hogie|Elite Women': {
-        PointsPerCost: pointsBreakdown['Elite Women'][0] / 14000,
+        PointsPerCost: pointsBreakdown['Elite Women'][1] / 14000,
       },
     });
     expect(outliers).toBeUndefined;
