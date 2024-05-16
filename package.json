@@ -4,9 +4,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "yarn nx-cloud record -- nx affected -t lint",
-    "test": "yarn nx-cloud record -- nx affected -t test",
-    "build": "yarn nx-cloud record -- nx affected -t build"
+    "lint": "yarn nx-cloud record -- nx run-many -t lint",
+    "test": "yarn nx-cloud record -- nx run-many -t test",
+    "build": "yarn nx-cloud record -- nx run-many -t build"
   },
   "devDependencies": {
     "@nx/eslint": "19.0.3",
