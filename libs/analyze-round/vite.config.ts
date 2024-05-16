@@ -5,7 +5,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/parse-files',
+  cacheDir: '../../node_modules/.vite/libs/analyze-round',
 
   plugins: [nxViteTsPaths()],
 
@@ -17,7 +17,7 @@ export default defineConfig({
     reporters: ['default'],
     coverage: {
       enabled: true,
-      reportsDirectory: '../../coverage/libs/parse-files',
+      reportsDirectory: '../../coverage/libs/analyze-round',
       provider: 'istanbul',
     },
   },

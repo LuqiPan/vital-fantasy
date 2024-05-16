@@ -8,7 +8,7 @@
     "test": "yarn nx-cloud record -- nx run-many -t test",
     "build": "yarn nx-cloud record -- nx run-many -t build",
     "ft-bill": "node dist/apps/ft-bill/main.js",
-    "clean": "rm -rf node_modules; rm -rf dist; rm -rf coverage; rm -rf tmp"
+    "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp"
   },
   "devDependencies": {
     "@nx/esbuild": "19.0.4",
