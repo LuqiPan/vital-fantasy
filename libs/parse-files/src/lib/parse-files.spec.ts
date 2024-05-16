@@ -1,5 +1,5 @@
 import { pointsBreakdown } from '@vital-fantasy/constants';
-import { parseFiles } from '@vital-fantasy/parse-files';
+import { parseFiles } from './parse-files';
 
 const statsCsvPath = './src/assets/test-stats.csv';
 const resultsCsvPath = './src/assets/test-results.csv';
