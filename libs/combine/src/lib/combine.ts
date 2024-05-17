@@ -68,3 +68,4 @@ export function combine(stats: Stats, results: Results): ReturnValues {
 
   return returnValues;
 }
+

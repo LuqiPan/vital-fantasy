@@ -1,10 +1,9 @@
 {
   "name": "combine",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "shared/combine/src",
+  "sourceRoot": "libs/combine/src",
   "projectType": "library",
   "tags": [],
-  "targets": {
-    "build": {}
-  }
+  "// targets": "to see all targets run: nx show project combine --web",
+  "targets": {}
 }

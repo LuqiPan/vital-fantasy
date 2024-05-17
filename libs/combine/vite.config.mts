@@ -5,7 +5,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/shared/combine',
+  cacheDir: '../../node_modules/.vite/libs/combine',
 
   plugins: [nxViteTsPaths()],
 
@@ -17,7 +17,7 @@ export default defineConfig({
     reporters: ['default'],
     coverage: {
       enabled: true,
-      reportsDirectory: '../../coverage/shared/combine',
+      reportsDirectory: '../../coverage/libs/combine',
       provider: 'istanbul',
     },
   },
