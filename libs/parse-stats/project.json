@@ -1,7 +1,7 @@
 {
   "name": "parse-stats",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "shared/parse-stats/src",
+  "sourceRoot": "libs/parse-stats/src",
   "projectType": "library",
   "tags": [],
   "targets": {

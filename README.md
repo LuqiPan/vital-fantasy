@@ -6,6 +6,7 @@
 - [ ] single package.json file across the whole monorepo
 - [ ] exclude vite.config.mjs instead
 - [ ] ESM
+- [ ] module commonjs
 - [ ] protected riders
 - [ ] use enum for PointsBreakdown in constants
 - [ ] DRY parseStats and parseResults
