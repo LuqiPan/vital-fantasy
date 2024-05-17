@@ -15,7 +15,6 @@
         "bundle": true,
         "main": "apps/ft-bill/src/main.ts",
         "tsConfig": "apps/ft-bill/tsconfig.app.json",
-        "assets": ["apps/ft-bill/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": false,
