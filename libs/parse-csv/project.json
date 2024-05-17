@@ -1,7 +1,7 @@
 {
   "name": "parse-csv",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "shared/parse-csv/src",
+  "sourceRoot": "libs/parse-csv/src",
   "projectType": "library",
   "tags": [],
   "targets": {
