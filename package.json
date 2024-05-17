@@ -8,13 +8,15 @@
     "lint": "yarn nx-cloud record -- nx run-many -t lint",
     "test": "yarn nx-cloud record -- nx run-many -t test",
     "build": "yarn nx-cloud record -- nx run-many -t build",
+    "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp",
     "ft-bill": "node dist/apps/ft-bill",
-    "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp"
+    "bielsko-biala": "node dist/apps/bielsko-biala"
   },
   "devDependencies": {
     "@nx/esbuild": "19.0.4",
     "@nx/eslint": "19.0.4",
     "@nx/eslint-plugin": "19.0.4",
+    "@nx/js": "19.0.4",
     "@nx/node": "19.0.4",
     "@nx/vite": "^19.0.4",
     "@nx/workspace": "19.0.4",

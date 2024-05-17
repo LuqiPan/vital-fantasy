@@ -1,7 +1,7 @@
 {
-  "name": "ft-bill",
+  "name": "bielsko-biala",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/ft-bill/src",
+  "sourceRoot": "apps/bielsko-biala/src",
   "projectType": "application",
   "tags": [],
   "targets": {
