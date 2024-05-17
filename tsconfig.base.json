@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -13,7 +14,6 @@
     "lib": ["esnext"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
     "paths": {
       "@vital-fantasy/analyze-round": ["libs/analyze-round/src/index.ts"],
       "@vital-fantasy/combine": ["libs/combine/src/index.ts"],

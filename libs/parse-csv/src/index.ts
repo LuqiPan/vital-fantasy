@@ -1,1 +1,1 @@
-export * from './lib/parse-csv';
+export * from './lib/parse-csv.js';

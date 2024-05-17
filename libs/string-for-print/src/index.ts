@@ -1,1 +1,1 @@
-export * from './lib/string-for-print';
+export * from './lib/string-for-print.js';

@@ -1,4 +1,4 @@
-import { parseResultsCsv, parseStatsCsv } from './parse-files';
+import { parseResultsCsv, parseStatsCsv } from './parse-files.js';
 import { combine } from '@vital-fantasy/combine';
 import { stringForPrint } from '@vital-fantasy/string-for-print';
 

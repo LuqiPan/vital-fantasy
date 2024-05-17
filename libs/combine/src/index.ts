@@ -1,1 +1,1 @@
-export * from './lib/combine';
+export * from './lib/combine.js';

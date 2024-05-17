@@ -1,2 +1,2 @@
-export * from './lib/analyze-round';
-export * from './lib/parse-files';
+export * from './lib/analyze-round.js';
+export * from './lib/parse-files.js';

@@ -1,1 +1,1 @@
-export * from './lib/parse-results';
+export * from './lib/parse-results.js';
