@@ -3,5 +3,3 @@ const statsRiderClassIndex = 3;
 const statsRiderCostIndex = 4;
 
 export { statsRiderNameIndex, statsRiderClassIndex, statsRiderCostIndex };
-
-export const testStatsCsvPath = './src/assets/test-stats.csv';

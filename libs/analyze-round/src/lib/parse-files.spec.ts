@@ -1,5 +1,6 @@
-import { pointsBreakdown, testStatsCsvPath } from '@vital-fantasy/constants';
+import { pointsBreakdown } from '@vital-fantasy/constants';
 import { parseStatsCsv } from './parse-files.js';
+import { testStatsCsvPath } from './asset-path.js';
 import {
   statsRiderNameIndex,
   statsRiderClassIndex,
