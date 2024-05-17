@@ -8,7 +8,6 @@
     "build": {
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
       "options": {
         "platform": "node",
         "outputPath": "dist/apps/ft-bill",
@@ -19,20 +18,9 @@
         "assets": ["apps/ft-bill/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
-          "sourcemap": true,
+          "sourcemap": false,
           "outExtension": {
             ".js": ".js"
-          }
-        }
-      },
-      "configurations": {
-        "development": {},
-        "production": {
-          "esbuildOptions": {
-            "sourcemap": false,
-            "outExtension": {
-              ".js": ".js"
-            }
           }
         }
       }
