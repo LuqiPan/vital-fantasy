@@ -1,6 +1,6 @@
 import { pointsBreakdown } from '@vital-fantasy/constants';
 import { combine, ReturnValues } from './combine';
-import { Results } from '@vital-fantasy/parse-results';
+import { Results } from '@vital-fantasy/types';
 import { Stats } from '@vital-fantasy/parse-stats';
 
 describe('combine', () => {

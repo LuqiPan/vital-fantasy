@@ -1,18 +1,9 @@
-import {
-  pointsBreakdown,
-  testResultsCsvPath,
-  testStatsCsvPath,
-} from '@vital-fantasy/constants';
-import { parseResultsCsv, parseStatsCsv } from './parse-files';
+import { pointsBreakdown, testStatsCsvPath } from '@vital-fantasy/constants';
+import { parseStatsCsv } from './parse-files.js';
 import {
   statsRiderNameIndex,
   statsRiderClassIndex,
   statsRiderCostIndex,
-} from '@vital-fantasy/constants';
-import {
-  resultsRiderNameIndex,
-  resultsRiderClassIndex,
-  resultsRiderSemiRankIndex,
 } from '@vital-fantasy/constants';
 import { combine } from '@vital-fantasy/combine';
 
@@ -31,22 +22,7 @@ describe('parseStatsCsv', () => {
   });
 });
 
-describe('parseResultsCsv', () => {
-  it('should work', async () => {
-    const results = await parseResultsCsv(
-      testResultsCsvPath,
-      resultsRiderNameIndex,
-      resultsRiderClassIndex,
-      resultsRiderSemiRankIndex
-    );
-
-    expect(results).toEqual({
-      'Abigail Hogie|Elite Women': { semiRank: 1 },
-    });
-  });
-});
-
-describe('parseStatsCsv and parseResultsCsv', () => {
+describe('parseStatsCsv and testResults', () => {
   it('combine as expected', async () => {
     const stats = await parseStatsCsv(
       testStatsCsvPath,
@@ -55,12 +31,9 @@ describe('parseStatsCsv and parseResultsCsv', () => {
       statsRiderCostIndex
     );
 
-    const results = await parseResultsCsv(
-      testResultsCsvPath,
-      resultsRiderNameIndex,
-      resultsRiderClassIndex,
-      resultsRiderSemiRankIndex
-    );
+    const results = {
+      'Abigail Hogie|Elite Women': { semiRank: 1 },
+    };
 
     const { predictions, outliers } = combine(stats, results);
 

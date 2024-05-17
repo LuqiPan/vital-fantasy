@@ -1,11 +1,15 @@
-import { analyzeRound } from './analyze-round';
-import { testStatsCsvPath, testResultsCsvPath } from '@vital-fantasy/constants';
+import { analyzeRound } from './analyze-round.js';
+import { testStatsCsvPath } from '@vital-fantasy/constants';
+
+const testResults = {
+  'Abigail Hogie|Elite Women': { semiRank: 1 },
+};
 
 describe('analyzeRound', () => {
   it('should work', async () => {
     const consoleSpy = vi.spyOn(console, 'log');
 
-    await analyzeRound('Test Round', testStatsCsvPath, testResultsCsvPath);
+    await analyzeRound('Test Round', testStatsCsvPath, testResults);
 
     expect(consoleSpy).toHaveBeenCalledTimes(5);
     expect(consoleSpy).toHaveBeenNthCalledWith(

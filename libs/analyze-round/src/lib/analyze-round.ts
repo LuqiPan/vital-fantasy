@@ -1,35 +1,24 @@
-import { parseResultsCsv, parseStatsCsv } from './parse-files.js';
+import { parseStatsCsv } from './parse-files.js';
 import { combine } from '@vital-fantasy/combine';
 import { stringForPrint } from '@vital-fantasy/string-for-print';
+import { Results } from '@vital-fantasy/types';
 
 import {
   statsRiderNameIndex,
   statsRiderClassIndex,
   statsRiderCostIndex,
 } from '@vital-fantasy/constants';
-import {
-  resultsRiderNameIndex,
-  resultsRiderClassIndex,
-  resultsRiderSemiRankIndex,
-} from '@vital-fantasy/constants';
 
 export const analyzeRound = async (
   round: string,
   statsCsvPath: string,
-  resultsCsvPath: string
+  results: Results
 ) => {
   const stats = await parseStatsCsv(
     statsCsvPath,
     statsRiderNameIndex,
     statsRiderClassIndex,
     statsRiderCostIndex
-  );
-
-  const results = await parseResultsCsv(
-    resultsCsvPath,
-    resultsRiderNameIndex,
-    resultsRiderClassIndex,
-    resultsRiderSemiRankIndex
   );
 
   const { predictions, outliers } = combine(stats, results);
