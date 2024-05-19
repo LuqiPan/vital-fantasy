@@ -2488,7 +2488,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nx/vite@npm:19.0.4, @nx/vite@npm:^19.0.4":
+"@nx/vite@npm:19.0.4":
   version: 19.0.4
   resolution: "@nx/vite@npm:19.0.4"
   dependencies:
@@ -3151,7 +3151,7 @@ __metadata:
     "@nx/eslint-plugin": "npm:19.0.4"
     "@nx/js": "npm:19.0.4"
     "@nx/node": "npm:19.0.4"
-    "@nx/vite": "npm:^19.0.4"
+    "@nx/vite": "npm:19.0.4"
     "@nx/workspace": "npm:19.0.4"
     "@swc-node/register": "npm:~1.8.0"
     "@swc/core": "npm:1.4.17"

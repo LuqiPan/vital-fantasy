@@ -4,6 +4,8 @@
 
 - try rollup again
 - try nx-biome
+- only use nx cloud cache on CI
+- prettier
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
 
