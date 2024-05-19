@@ -1,4 +1,5 @@
 {
   "name": "@vital-fantasy/bielsko-biala",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "type": "module"
 }
