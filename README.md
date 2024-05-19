@@ -3,7 +3,7 @@
 ### TODO
 
 - try rollup again
-- protected riders
+- try nx-biome
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
 
