@@ -26,28 +26,26 @@
       }
     },
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "platform": "node",
-        "outputPath": "dist/{projectRoot}",
-        "format": ["esm"],
-        "bundle": true,
         "main": "{projectRoot}/src/main.ts",
+        "outputPath": "dist/{projectRoot}",
         "tsConfig": "{projectRoot}/tsconfig.app.json",
-        "generatePackageJson": true,
-        "esbuildOptions": {
-          "sourcemap": false,
-          "outExtension": {
-            ".js": ".js"
-          }
+        "compiler": "swc",
+        "project": "{projectRoot}/package.json",
+        "format": ["esm"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
         }
       }
-    },
-    "@nx/esbuild:esbuild": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
     },
     "@nx/rollup:rollup": {
       "cache": true,

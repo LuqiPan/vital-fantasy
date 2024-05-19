@@ -5,27 +5,6 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "main": "apps/bielsko-biala/src/main.ts",
-        "outputPath": "dist/apps/bielsko-biala",
-        "tsConfig": "apps/bielsko-biala/tsconfig.app.json",
-        "compiler": "swc",
-        "project": "apps/bielsko-biala/package.json",
-        "format": ["esm"]
-      },
-      "configurations": {
-        "production": {
-          "optimization": true,
-          "sourceMap": false,
-          "namedChunks": false,
-          "extractLicenses": true,
-          "vendorChunk": false
-        }
-      }
-    }
+    "build": {}
   }
 }
