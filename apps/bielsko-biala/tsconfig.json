@@ -8,6 +8,8 @@
     }
   ],
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "esModuleInterop": true
   }
 }
