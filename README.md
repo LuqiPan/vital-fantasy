@@ -6,6 +6,7 @@
 - try nx-biome
 - only use nx cloud cache on CI
 - prettier
+- semiRank
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
 
