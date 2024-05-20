@@ -4,6 +4,7 @@
   "sourceRoot": "libs/string-for-print/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project string-for-print --web",
-  "targets": {}
+  "targets": {
+    "build": {}
+  }
 }

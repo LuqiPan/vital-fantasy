@@ -4,5 +4,7 @@
   "sourceRoot": "libs/parse-csv/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {}
+  }
 }

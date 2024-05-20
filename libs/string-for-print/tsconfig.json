@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -10,7 +8,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "composite": true,
-    "declaration": true,
+    "declaration": true
   },
   "files": [],
   "include": [],

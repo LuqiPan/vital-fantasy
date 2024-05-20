@@ -4,5 +4,7 @@
   "sourceRoot": "libs/parse-stats/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {}
+  }
 }
