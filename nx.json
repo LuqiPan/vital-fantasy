@@ -36,11 +36,11 @@
         "main": "{projectRoot}/src/main.ts",
         "tsConfig": "{projectRoot}/tsconfig.app.json",
         "generatePackageJson": true,
-        "esbuildOptions": {
-          "sourcemap": false,
-          "outExtension": {
-            ".js": ".js"
-          }
+        "metafile": true
+      },
+      "configurations": {
+        "watch": {
+          "watch": true
         }
       }
     },
