@@ -2,6 +2,8 @@
 
 ### TODO
 
+- try codecov components
+- try codecov bundles
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
 - try nx-biome
