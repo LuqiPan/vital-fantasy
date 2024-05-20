@@ -2,12 +2,11 @@
 
 ### TODO
 
-- try nx-biome
-- only use nx cloud cache on CI
-- prettier
 - semiRank
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
+- try nx-biome
+  - https://github.com/biomejs/biome/issues/2228
 
 ### Notes
 
