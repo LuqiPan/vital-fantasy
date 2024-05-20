@@ -14,7 +14,7 @@ describe('parseStatsCsv', () => {
       testStatsCsvPath,
       statsRiderNameIndex,
       statsRiderClassIndex,
-      statsRiderCostIndex
+      statsRiderCostIndex,
     );
 
     expect(stats).toEqual({
@@ -29,7 +29,7 @@ describe('parseStatsCsv and testResults', () => {
       testStatsCsvPath,
       statsRiderNameIndex,
       statsRiderClassIndex,
-      statsRiderCostIndex
+      statsRiderCostIndex,
     );
 
     const results = {

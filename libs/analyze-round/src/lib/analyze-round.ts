@@ -12,13 +12,13 @@ import {
 export const analyzeRound = async (
   round: string,
   statsCsvPath: string,
-  results: Results
+  results: Results,
 ) => {
   const stats = await parseStatsCsv(
     statsCsvPath,
     statsRiderNameIndex,
     statsRiderClassIndex,
-    statsRiderCostIndex
+    statsRiderCostIndex,
   );
 
   const { predictions, outliers } = combine(stats, results);

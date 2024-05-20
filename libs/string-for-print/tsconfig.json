@@ -10,7 +10,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "composite": true,
-    "declaration": true,
+    "declaration": true
   },
   "files": [],
   "include": [],

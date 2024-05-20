@@ -15,7 +15,7 @@ export async function parseStats(
   rstream: NodeJS.ReadableStream,
   riderNameIndex: number,
   riderClassIndex: number,
-  riderCostIndex: number
+  riderCostIndex: number,
 ): Promise<Stats> {
   const records = await parseCsv(rstream);
 

@@ -18,7 +18,7 @@ class ReturnValues {
 
   constructor(
     predictions: Predictions = {},
-    outliers: [[string, string]] | undefined = undefined
+    outliers: [[string, string]] | undefined = undefined,
   ) {
     this.predictions = predictions;
     this.outliers = outliers;

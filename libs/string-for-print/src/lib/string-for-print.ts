@@ -13,7 +13,7 @@ export function stringForPrint(predictions: Predictions): string {
         '\t|\t' +
         e[1].Cost +
         '\t|\t' +
-        e[0]
+        e[0],
     )
     .reduce((s, e) => s + '\n' + e);
 }

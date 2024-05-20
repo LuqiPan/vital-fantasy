@@ -62,10 +62,10 @@ describe('combine', () => {
       testCaseDescription: string,
       stats: Stats,
       results: Results,
-      expected: ReturnValues
+      expected: ReturnValues,
     ) => {
       console.log(testCaseDescription);
       expect(expected).toEqual(combine(stats, results));
-    }
+    },
   );
 });

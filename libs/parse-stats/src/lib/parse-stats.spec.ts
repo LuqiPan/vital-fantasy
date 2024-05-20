@@ -15,7 +15,7 @@ describe('parseStats', () => {
       rStream,
       statsRiderNameIndex,
       statsRiderClassIndex,
-      statsRiderCostIndex
+      statsRiderCostIndex,
     );
     expect(stats).toEqual({
       'Abigail Hogie|Elite Women': { cost: 14000 },

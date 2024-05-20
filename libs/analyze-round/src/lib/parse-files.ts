@@ -5,13 +5,13 @@ export const parseStatsCsv = async function (
   statsCsvPath: string,
   statsRiderNameIndex: number,
   statsRiderClassIndex: number,
-  statsRiderCostIndex: number
+  statsRiderCostIndex: number,
 ): Promise<Stats> {
   const statsCsv = fs.createReadStream(statsCsvPath);
   return parseStats(
     statsCsv,
     statsRiderNameIndex,
     statsRiderClassIndex,
-    statsRiderCostIndex
+    statsRiderCostIndex,
   );
 };
