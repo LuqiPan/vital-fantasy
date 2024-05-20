@@ -5,6 +5,11 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "build": {}
+    "build": {
+      "options": {
+        "main": "apps/bielsko-biala/src/main.ts",
+        "tsConfig": "apps/bielsko-biala/tsconfig.app.json"
+      }
+    }
   }
 }

@@ -5,6 +5,11 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "build": {}
+    "build": {
+      "options": {
+        "main": "apps/ft-bill/src/main.ts",
+        "tsConfig": "apps/ft-bill/tsconfig.app.json"
+      }
+    }
   }
 }
