@@ -9,7 +9,7 @@ export function stringForPrint(predictions: Predictions): string {
       (e) =>
         e[1].PointsPerCost.toFixed(20) +
         '\t|\t' +
-        e[1].SemiRank +
+        e[1].Rank +
         '\t|\t' +
         e[1].Cost +
         '\t|\t' +

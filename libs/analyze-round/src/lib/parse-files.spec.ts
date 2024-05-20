@@ -33,7 +33,7 @@ describe('parseStatsCsv and testResults', () => {
     );
 
     const results = {
-      'Abigail Hogie|Elite Women': { semiRank: 1 },
+      'Abigail Hogie|Elite Women': { Rank: 1 },
     };
 
     const { predictions, outliers } = combine(stats, results);
@@ -41,7 +41,7 @@ describe('parseStatsCsv and testResults', () => {
     expect(predictions).toEqual({
       'Abigail Hogie|Elite Women': {
         PointsPerCost: pointsBreakdown['Elite Women'][1] / 14000,
-        SemiRank: 1,
+        Rank: 1,
         Cost: 14000,
       },
     });

@@ -2,7 +2,6 @@
 
 ### TODO
 
-- semiRank
 - use enum for PointsBreakdown in constants
 - DRY parseStats and parseResults
 - try nx-biome

@@ -2,7 +2,7 @@ import { analyzeRound } from './analyze-round.js';
 import { testStatsCsvPath } from './asset-path.js';
 
 const testResults = {
-  'Abigail Hogie|Elite Women': { semiRank: 1 },
+  'Abigail Hogie|Elite Women': { Rank: 1 },
 };
 
 describe('analyzeRound', () => {

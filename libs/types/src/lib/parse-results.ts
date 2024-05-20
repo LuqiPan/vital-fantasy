@@ -1,5 +1,5 @@
 type Result = {
-  semiRank: number;
+  Rank: number;
 };
 
 type Results = {
