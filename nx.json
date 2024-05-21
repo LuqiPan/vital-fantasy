@@ -27,6 +27,9 @@
     },
     "build": {
       "executor": "@nx/esbuild:esbuild",
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
       "outputs": ["{options.outputPath}"],
       "options": {
         "platform": "node",
@@ -43,11 +46,6 @@
           "watch": true
         }
       }
-    },
-    "@nx/esbuild:esbuild": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
