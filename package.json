@@ -11,8 +11,47 @@
     "check": "nx run-many -t lint test build --parallel 10",
     "ci": "yarn nx-cloud record -- yarn check",
     "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp",
-    "ft-bill": "node dist/apps/ft-bill",
-    "bielsko-biala": "node dist/apps/bielsko-biala"
+    "ft-bill": "nx exec -- node dist/apps/ft-bill",
+    "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala"
+  },
+  "nx": {
+    "implicitDependencies": [
+      "ft-bill",
+      "bielsko-biala"
+    ],
+    "targets": {
+      "ft-bill": {
+        "dependsOn": [
+          "^build"
+        ],
+        "cache": true
+      },
+      "bielsko-biala": {
+        "dependsOn": [
+          "^build"
+        ],
+        "cache": true
+      },
+      "lint": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "echo -n"
+        },
+        "cache": true
+      },
+      "test": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "echo -n"
+        }
+      },
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "echo -n"
+        }
+      }
+    }
   },
   "devDependencies": {
     "@nx/esbuild": "19.0.4",
