@@ -1,17 +1,26 @@
 {
-  "name": "vital-fantasy-root",
+  "name": "workspace-root",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./",
   "projectType": "library",
   "tags": [],
-  "implicitDependencies": ["ft-bill", "bielsko-biala"],
   "targets": {
     "ft-bill": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        {
+          "projects": ["ft-bill"],
+          "target": "build"
+        }
+      ],
       "cache": true
     },
     "bielsko-biala": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        {
+          "projects": ["bielsko-biala"],
+          "target": "build"
+        }
+      ],
       "cache": true
     },
     "lint": {
