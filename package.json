@@ -8,7 +8,7 @@
     "lint": "nx run-many -t lint",
     "test": "nx run-many -t test",
     "build": "nx run-many -t build",
-    "check": "nx run-many -t lint test build --parallel 10",
+    "check": "nx run-many -t lint test build",
     "ci": "yarn nx-cloud record -- yarn check",
     "ci:ft-bill": "yarn nx-cloud record -- yarn ft-bill",
     "ci:bielsko-biala": "yarn nx-cloud record -- yarn bielsko-biala",
