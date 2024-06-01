@@ -14,17 +14,6 @@
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "targetDefaults": {
-    "test": {
-      "executor": "@nx/vite:test",
-      "cache": true,
-      "inputs": ["default", "^production"],
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "configurations": {
-        "watch": {
-          "watch": true
-        }
-      }
-    },
     "build": {
       "executor": "@nx/esbuild:esbuild",
       "cache": true,
