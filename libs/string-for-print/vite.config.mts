@@ -17,7 +17,7 @@ export default defineConfig({
 
     reporters: ['default', 'junit'],
     outputFile: {
-      junit: '../../coverage/libs/string-for-print/junit-report.xml',
+      junit: '../../coverage/libs/string-for-print/junit.xml',
     },
 
     coverage: {

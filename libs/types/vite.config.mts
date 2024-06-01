@@ -16,7 +16,7 @@ export default defineConfig({
 
     reporters: ['default', 'junit'],
     outputFile: {
-      junit: '../../coverage/libs/types/junit-report.xml',
+      junit: '../../coverage/libs/types/junit.xml',
     },
 
     passWithNoTests: true,

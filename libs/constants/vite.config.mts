@@ -16,7 +16,7 @@ export default defineConfig({
 
     reporters: ['default', 'junit'],
     outputFile: {
-      junit: '../../coverage/libs/constants/junit-report.xml',
+      junit: '../../coverage/libs/constants/junit.xml',
     },
   },
 });
