@@ -2,6 +2,7 @@
 
 ### TODO
 
+- try project crystal, inferred esbuild and test targets
 - try codecov components
 - try codecov bundles
 - use enum for PointsBreakdown in constants
