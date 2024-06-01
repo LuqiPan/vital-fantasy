@@ -1,7 +1,7 @@
 import { sampleCsv } from './constants';
 
-describe('constants', () => {
-  it('should work', () => {
-    expect(sampleCsv.indexOf('\n')).toEqual(-1);
+describe('sampleCsv', () => {
+  it('should contain at least one newline', () => {
+    expect(sampleCsv.indexOf('\n')).not.toEqual(-1);
   });
 });
