@@ -1,0 +1,39 @@
+{
+  "name": "vital-fantasy-root",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./",
+  "projectType": "library",
+  "tags": [],
+  "implicitDependencies": ["ft-bill", "bielsko-biala"],
+  "targets": {
+    "ft-bill": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "bielsko-biala": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo -n"
+      },
+      "cache": true
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo -n"
+      },
+      "cache": true
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo -n"
+      },
+      "cache": true
+    }
+  }
+}

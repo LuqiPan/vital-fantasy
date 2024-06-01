@@ -16,45 +16,7 @@
     "ft-bill": "nx exec -- node dist/apps/ft-bill",
     "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala"
   },
-  "nx": {
-    "implicitDependencies": [
-      "ft-bill",
-      "bielsko-biala"
-    ],
-    "targets": {
-      "ft-bill": {
-        "dependsOn": [
-          "^build"
-        ],
-        "cache": true
-      },
-      "bielsko-biala": {
-        "dependsOn": [
-          "^build"
-        ],
-        "cache": true
-      },
-      "lint": {
-        "executor": "nx:run-commands",
-        "options": {
-          "command": "echo -n"
-        },
-        "cache": true
-      },
-      "test": {
-        "executor": "nx:run-commands",
-        "options": {
-          "command": "echo -n"
-        }
-      },
-      "build": {
-        "executor": "nx:run-commands",
-        "options": {
-          "command": "echo -n"
-        }
-      }
-    }
-  },
+  "nx": {},
   "devDependencies": {
     "@nx/esbuild": "19.1.1",
     "@nx/eslint": "19.1.1",
