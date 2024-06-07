@@ -12,9 +12,11 @@
     "ci": "yarn nx-cloud record -- yarn check",
     "ci:ft-bill": "yarn nx-cloud record -- yarn ft-bill",
     "ci:bielsko-biala": "yarn nx-cloud record -- yarn bielsko-biala",
+    "ci:leogang": "yarn nx-cloud record -- yarn leogang",
     "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp",
     "ft-bill": "nx exec -- node dist/apps/ft-bill",
-    "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala"
+    "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala",
+    "leogang": "nx exec -- node dist/apps/leogang"
   },
   "nx": {},
   "devDependencies": {
@@ -25,6 +27,9 @@
     "@nx/node": "19.1.2",
     "@nx/vite": "19.1.2",
     "@nx/workspace": "19.1.2",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
     "@types/node": "20.13.0",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
