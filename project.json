@@ -23,6 +23,15 @@
       ],
       "cache": true
     },
+    "leogang": {
+      "dependsOn": [
+        {
+          "projects": ["leogang"],
+          "target": "build"
+        }
+      ],
+      "cache": true
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
