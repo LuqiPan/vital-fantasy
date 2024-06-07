@@ -1,0 +1,14 @@
+{
+  "name": "leogang",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/leogang/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "options": {
+        "main": "{projectRoot}/src/main.js"
+      }
+    }
+  }
+}
