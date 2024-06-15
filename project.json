@@ -11,8 +11,7 @@
           "projects": ["ft-bill"],
           "target": "build"
         }
-      ],
-      "cache": true
+      ]
     },
     "bielsko-biala": {
       "dependsOn": [
@@ -20,8 +19,7 @@
           "projects": ["bielsko-biala"],
           "target": "build"
         }
-      ],
-      "cache": true
+      ]
     },
     "leogang": {
       "dependsOn": [
@@ -29,8 +27,7 @@
           "projects": ["leogang"],
           "target": "build"
         }
-      ],
-      "cache": true
+      ]
     },
     "lint": {
       "executor": "nx:run-commands",
