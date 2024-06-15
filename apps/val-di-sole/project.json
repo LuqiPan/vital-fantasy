@@ -1,0 +1,56 @@
+{
+  "name": "val-di-sole",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/val-di-sole/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/val-di-sole",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/val-di-sole/src/main.js",
+        "tsConfig": "apps/val-di-sole/tsconfig.app.json",
+        "assets": ["apps/val-di-sole/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "val-di-sole:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "val-di-sole:build:development"
+        },
+        "production": {
+          "buildTarget": "val-di-sole:build:production"
+        }
+      }
+    }
+  }
+}
