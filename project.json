@@ -29,6 +29,14 @@
         }
       ]
     },
+    "val-di-sole": {
+      "dependsOn": [
+        {
+          "projects": ["val-di-sole"],
+          "target": "build"
+        }
+      ]
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {

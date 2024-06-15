@@ -9,14 +9,16 @@
     "test": "nx run-many -t test",
     "build": "nx run-many -t build",
     "check": "nx run-many -t lint test build",
+    "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp",
+    "ft-bill": "nx exec -- node dist/apps/ft-bill",
+    "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala",
+    "leogang": "nx exec -- node dist/apps/leogang",
+    "val-di-sole": "nx exec -- node dist/apps/val-di-sole",
     "ci": "yarn nx-cloud record -- yarn check",
     "ci:ft-bill": "yarn nx-cloud record -- yarn ft-bill",
     "ci:bielsko-biala": "yarn nx-cloud record -- yarn bielsko-biala",
     "ci:leogang": "yarn nx-cloud record -- yarn leogang",
-    "clean": "rm -rf dist; rm -rf coverage; rm -rf tmp",
-    "ft-bill": "nx exec -- node dist/apps/ft-bill",
-    "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala",
-    "leogang": "nx exec -- node dist/apps/leogang"
+    "ci:val-di-sole": "yarn nx-cloud record -- yarn val-di-sole"
   },
   "nx": {},
   "devDependencies": {

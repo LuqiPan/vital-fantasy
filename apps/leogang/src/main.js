@@ -17,6 +17,7 @@ const results = {
   'Camille Balanche|Elite Women': { Rank: 5 },
   'Marine Cabirou|Elite Women': { Rank: 5 },
 
+  // Elite Men
   'Loic Bruni|Elite Men': { Rank: 1 },
   'Luca Shaw|Elite Men': { Rank: 2 },
   'Troy Brosnan|Elite Men': { Rank: 3 },
