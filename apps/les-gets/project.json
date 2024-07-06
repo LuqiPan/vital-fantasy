@@ -1,0 +1,56 @@
+{
+  "name": "les-gets",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/les-gets/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/les-gets",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/les-gets/src/main.js",
+        "tsConfig": "apps/les-gets/tsconfig.app.json",
+        "assets": ["apps/les-gets/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "les-gets:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "les-gets:build:development"
+        },
+        "production": {
+          "buildTarget": "les-gets:build:production"
+        }
+      }
+    }
+  }
+}

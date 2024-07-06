@@ -37,6 +37,14 @@
         }
       ]
     },
+    "les-gets": {
+      "dependsOn": [
+        {
+          "projects": ["les-gets"],
+          "target": "build"
+        }
+      ]
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {

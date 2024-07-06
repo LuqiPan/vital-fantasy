@@ -14,11 +14,13 @@
     "bielsko-biala": "nx exec -- node dist/apps/bielsko-biala",
     "leogang": "nx exec -- node dist/apps/leogang",
     "val-di-sole": "nx exec -- node dist/apps/val-di-sole",
+    "les-gets": "nx exec -- node dist/apps/les-gets",
     "ci": "yarn nx-cloud record -- yarn check",
     "ci:ft-bill": "yarn nx-cloud record -- yarn ft-bill",
     "ci:bielsko-biala": "yarn nx-cloud record -- yarn bielsko-biala",
     "ci:leogang": "yarn nx-cloud record -- yarn leogang",
-    "ci:val-di-sole": "yarn nx-cloud record -- yarn val-di-sole"
+    "ci:val-di-sole": "yarn nx-cloud record -- yarn val-di-sole",
+    "ci:les-gets": "yarn nx-cloud record -- yarn les-gets"
   },
   "nx": {},
   "devDependencies": {
