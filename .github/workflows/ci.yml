@@ -20,6 +20,9 @@ jobs:
 
       - run: corepack enable
 
+      - name: Start CI run
+        run: 'yarn nx-cloud start-ci-run --distribute-on="4 linux-medium-js"'
+
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
@@ -57,5 +60,13 @@ jobs:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
       - run: yarn ci:leogang
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
+      - run: yarn ci:val-di-sole
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
+      - run: yarn ci:les-gets
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
