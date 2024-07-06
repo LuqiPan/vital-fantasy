@@ -20,14 +20,14 @@ jobs:
 
       - run: corepack enable
 
-      - name: Start CI run
-        run: 'yarn nx-cloud start-ci-run --distribute-on="4 linux-medium-js"'
-
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
           cache: 'yarn'
+
+      - name: Start CI run
+        run: 'yarn nx-cloud start-ci-run --distribute-on="4 linux-medium-js"'
 
       - run: yarn install --frozen-lockfile
 
