@@ -30,6 +30,8 @@ jobs:
 
       - name: Start CI run
         run: 'yarn nx-cloud start-ci-run --distribute-on="4 linux-medium-js"'
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
       - uses: nrwl/nx-set-shas@v4
 
