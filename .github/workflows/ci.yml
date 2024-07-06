@@ -53,22 +53,12 @@ jobs:
         with:
           directory: ./coverage
 
-      - run: yarn ci:ft-bill
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+      - run: yarn ft-bill
 
-      - run: yarn ci:bielsko-biala
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+      - run: yarn bielsko-biala
 
-      - run: yarn ci:leogang
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+      - run: yarn leogang
 
-      - run: yarn ci:val-di-sole
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+      - run: yarn val-di-sole
 
-      - run: yarn ci:les-gets
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+      - run: yarn les-gets
